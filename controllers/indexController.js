@@ -43,9 +43,9 @@ class Controller{
     }
 
     static saveData(req,res){
-        const { fullName, username, password, address, role, email, age, phone, specialist} = req.body
+        const { fullName, address, email, age, phone} = req.body
         UserProfile.create({ fullName, age, email, phone, address})
-            .then((res.redirect('/'))) // ini nanti ditambahin ke halaman utama
+            .then((res.redirect())) // ini nanti ditambahin ke halaman utama
             .catch((err) => {
                 if (err.name === "SequelizeValidationError") {
                     const errors = err.errors.map((el) => {
