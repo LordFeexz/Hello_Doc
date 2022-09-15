@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const today = require('../helper/helper');
 module.exports = (sequelize, DataTypes) => {
   class CheckUp extends Model {
     /**
@@ -17,6 +18,13 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'UserId',
         foreignKey: 'DoctorId'
       })
+    }
+
+    CheckUpList(){
+      const option = {}
+      option.where.createdAt = today
+      
+      return this.findAll(option)
     }
   }
   CheckUp.init({
