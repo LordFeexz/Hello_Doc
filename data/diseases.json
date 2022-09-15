@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Batuk",
+    "symptom": "Pilek atau hidung tersumbat, sakit tenggorokan, mengi, sesak napas, perut mulas, demam, sakit telinga, serta nyeri otot",
+    "MedicineId": 1
+  },
+  {
+    "name": "Anemia",
+    "symptom": "Lemas dan cepat lelah. Sakit kepala dan pusing.",
+    "MedicineId": 2
+  },
+  {
+    "name": "Hipertensi",
+    "symptom": "Sakit kepala; Mimisan; Masalah penglihatan; Nyeri dada; Telinga berdengung; Sesak napas dan Aritmia",
+    "MedicineId": 3
+  },
+  {
+    "name": "Diabetes",
+    "symptom": "Peningkatan rasa haus. Peningkatan frekuensi buang air kecil. Mudah lelah atau rasa kelelahan terus-menerus. Adanya gangguan penglihatan, seperti pandangan yang kabur. Terjadinya infeksi pada tubuh terus-menerus, yang umum terjadi pada bagian gusi, kulit, maupun area vagina (pada wanita).",
+    "MedicineId": 4
+  },
+  {
+    "name": "Kolesterol",
+    "symptom": "Rasa sakit di dada bagian depan atau pada lengan (angina) ketika seseorang mengalami stres atau sedang melakukan kegiatan fisik yang berat.",
+    "MedicineId": 5
+  },
+  {
+    "name": "Demam",
+    "symptom": "non pretium quis lectus suspendisse potenti in eleifend quam a odio in",
+    "MedicineId": 6
+  },
+  {
+    "name": "Diare",
+    "symptom": "Feses lembek dan cair. Nyeri dan kram perut. Mual dan muntah. Nyeri kepala. Kehilangan nafsu makan. Haus terus-menerus. Darah pada feses.",
+    "MedicineId": 7
+  },
+  {
+    "name": "Tipes",
+    "symptom": "demam tinggi, diare atau konstipasi, sakit kepala, dan sakit perut dalam beberapa minggu",
+    "MedicineId": 8
+  },
+  {
+    "name": "Jantung",
+    "symptom": "Nyeri atau ketidaknyamanan di dada, nyeri punggung atau leher bagian atas, gangguan pencernaan, perut mulas, mual atau muntah, alami kelelahan ekstrem, pusing, hingga sesak napas.",
+    "MedicineId": 9
+  },
+  {
+    "name": "Defisiensi Imun",
+    "symptom": "Mata merah. Infeksi sinus. Pilek. Diare. Pneumonia. Infeksi jamur. Gingivitis.",
+    "MedicineId": 10
+  }
+]
