@@ -30,19 +30,44 @@ class Controller{
     }
 
     static register(req,res){
-        res.render('register')
+        UserProfile.findAll({
+            include: User
+        })
+            .then(register => {
+                res.render('register', { register })
+            })
+            .catch(err => {
+                res.send(err)
+            })
+        
     }
 
     static saveData(req,res){
-
+        const { fullName, userName, password, address, role, email, age, phone, specialist } = req.body
+        UserProfile.create({ fullName, age, email, phone, address, UserId })
     }
 
     static medicineList(req,res){
-
+        Medicine.findAll()
+            .then(medicines => {
+                res.render('medicines', { medicines })
+            })
+            .catch(err => {
+                res.send(err)
+            })
     }
 
     static delete(req,res){
-
+        const idReq = req.params.id
+        Medicine.destroy({
+            where: {
+                id: +idReq
+            }
+        })
+            .then(res.redirect('/medicine'))
+            .catch(err => {
+                res.send(err)
+            })
     }
 }
 
