@@ -15,11 +15,76 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserProfile.init({
-    fullName: DataTypes.STRING,
-    age: DataTypes.INTEGER,
-    email: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    address: DataTypes.TEXT,
+    fullName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Full name is required"
+        },
+        notEmpty: {
+          msg: "Fullname is required"
+        },
+      },
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "age is required"
+        },
+        notEmpty: {
+          msg: "age is required"
+        },
+      },
+    }, 
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Email is required"
+        },
+        notEmpty: {
+          msg: "Email is required"
+        },
+        isEmail: {
+          msg: "Email must be in email format"
+        }
+      },
+    }, 
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Phone number is required"
+        },
+        notEmpty: {
+          msg: "Phone number is required"
+        },
+        formattedPhone(value) {
+          if (value[0] == 0) {
+            throw new Error(
+              `Tidak perlu memakai angka 0 didepan nomor telepon`
+            )
+          }
+        }
+      },
+    }, 
+    address: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Address is required"
+        },
+        notEmpty: {
+          msg: "Address is required"
+        },
+      },
+    }, 
     UserId: DataTypes.INTEGER
   }, {
     sequelize,
