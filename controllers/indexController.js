@@ -4,7 +4,8 @@ const bcryptjs = require('bcryptjs')
 class Controller{
 
     static login(req,res){
-        res.render('login')
+        const {error} = req.query
+        res.render('login',{ error })
     }
 
     static verify(req,res){
@@ -33,8 +34,8 @@ class Controller{
         const { errors } = req.query
 
         User.findAll()
-            .then(register => {
-                res.render('register', { register, errors })
+            .then(() => {
+                res.render('register')
             })
             .catch(err => {
                 res.send(err)
@@ -78,6 +79,7 @@ class Controller{
                 res.send(err)
             })
     }
+
 }
 
 module.exports = Controller

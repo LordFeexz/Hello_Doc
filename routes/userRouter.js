@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router()
 const Controller = require('../controllers/userController')
 
-router.get('/checkup',Controller.checkUp) // utk nampilin form checkup
+router.get('/home',Controller.checkUp) // utk nampilin form checkup
 
 router.post('/checkup',Controller.saveCheckUp) // menambahkan form
 

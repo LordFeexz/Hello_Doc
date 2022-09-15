@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/header', {title: "Home"}); %>
+<body>
+    <%- include('partials/navbar', {title: "Home",link1: '/',button1: "",link2:'',button2:""}); %>
+
+   <h1 class="under" style="text-align: center; width: 400px; margin: 0 auto;">Welcome</h1>
+
+   <p style="text-align: center; width: 400px; margin: 0 auto;" >
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed unde a dolores exercitationem animi alias. Temporibus consequatur quod molestiae molestias quo aspernatur eos aliquid corrupti sit assumenda. Officiis porro esse necessitatibus voluptatum illum. Est id delectus natus? Quia, amet reprehenderit voluptas ratione corrupti consequuntur sed magnam dolorem rerum cupiditate tempora.
+   </p>
+   <br>
+   <form>
+    <div class="col-md-10 container">
+        <label class="form-label" style="text-align: center; width: 1100px;margin : 0 auto; font-size: larger; font-weight: bold;">tell us what are you feeling</label>
+        <textarea type="text" class="form-control" name="description"></textarea>
+      </div>
+      <br>
+      <div class="container">
+        <label class="form-label" style="text-align: center; width: 1100px;margin : 0 auto; font-size: larger; font-weight: bold;">Pilih Dokter</label>
+        <select class="form-select" aria-label="Default select example" name="role" style="text-align: center; width: 1100px;margin : 0 auto; font-size: larger;">
+            <option value="" disabled selected>--- SELECT ONE ---</option>
+            <option value="doctor">Doctor</option>
+            <option value="user">User</option>
+          </select>
+      </div>
+      <br>
+      <div class="container">
+        <label class="form-label" style="text-align: center; width: 1100px;margin : 0 auto; font-size: larger; font-weight: bold;">Gejala yg paling sesuai</label>
+        <select class="form-select" aria-label="Default select example" name="role" style="text-align: center; width: 1100px;margin : 0 auto; font-size: larger;">
+            <option value="" disabled selected>--- SELECT ONE ---</option>
+            <option value="doctor">Doctor</option>
+            <option value="user">User</option>
+          </select>
+      </div>
+   </form> <br> <br>
+   <div class="card col-md-4" style="width: 18rem;">
+    <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2022/09/15091228/Wajib-Tahu-Ini-X-Jenis-Tes-dalam-Pemeriksaan-TBC.jpg.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card col-md-4" style="width: 18rem;">
+    <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2022/09/15091228/Wajib-Tahu-Ini-X-Jenis-Tes-dalam-Pemeriksaan-TBC.jpg.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card col-md-4" style="width: 18rem;">
+    <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2022/09/15091228/Wajib-Tahu-Ini-X-Jenis-Tes-dalam-Pemeriksaan-TBC.jpg.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  
+
+    <%- include('partials/script'); %>
+</body>
+</html>

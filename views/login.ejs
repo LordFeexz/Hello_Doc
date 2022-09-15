@@ -3,11 +3,13 @@
     <%- include('partials/header', {title: "Home"}); %>
 <body>
     <%- include('partials/navbar', {title: "Home",link1: '/',button1: "",link2:'',button2:""}); %>
-    <center>
-      <h1 class="under">Hi Doc App</h1>
-    </center>
-    <h2>Login Form</h2>
-    <br>
+
+    <h1 class="under">Login Form</h1>
+    <% if (error) { %>
+     <p style="color: red;">
+      <%= error %>
+     </p>
+    <% } %>
     <form>
         <div class="mb-2">
           <label for="exampleInputEmail1" class="form-label">Username</label>
