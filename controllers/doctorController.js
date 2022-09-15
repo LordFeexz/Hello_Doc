@@ -3,14 +3,18 @@ const {User,Medicine,UserProfile,Disease,CheckUp} = require("../models")
 class Controller{
 
     static checkUp(req,res){
-        CheckUp.CheckUpList()
-        .then(data => res.render('checkUpList',{ data }))
+        CheckUp.findAll()
+        .then(data => res.render('doctor/checkUpList',{ data }))
         .catch(err => res.send(err))
     }
 
     static userList(req,res){
-        User.findAll()
-        .then(user => res.render('userList',{user}))
+        User.findAll({
+            where:{
+                role:'user'
+            }
+        })
+        .then(user => res.render('doctor/userList',{user}))
         .catch(err => res.send(err))
     }
 
@@ -21,12 +25,12 @@ class Controller{
                 role :'user'
             }
         })
-        .then(user => res.render('userDetail',{user}))
+        .then(user => res.render('doctor/userDetail',{user}))
         .catch(err => res.send(err))
     }
 
     static addMedicine(req,res){
-        res.render('addMedicine')
+        res.render('doctor/addMedicine')
     }
 
     static saveMedicine(req,res){

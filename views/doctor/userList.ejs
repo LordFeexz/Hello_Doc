@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/header', {title: "Home"}); %>
+<body>
+    <%- include('partials/navbar', {title: "Home",link1: '/',button1: "",link2:'',button2:""}); %>
+
+    <h1 class="under">
+        Patient List
+    </h1>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <% user.forEach(el => { %>
+         <tr>
+            <td><%= el.fullName %></td>
+            <td><%= el.age %></td>
+            <td><%= el.email %></td>
+            <td><%= el.phone %></td>
+            <td><%= el.address %></td>
+            <td>
+                <a href="/userList/<%= el.id %>/detail"></a>
+            </td>
+         </tr>
+        <% }) %>
+    </table>
+
+    <%- include('partials/script'); %>
+</body>
+</html>

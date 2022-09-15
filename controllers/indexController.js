@@ -34,8 +34,8 @@ class Controller{
         const { errors } = req.query
 
         User.findAll()
-            .then(register => {
-                res.render('register', { register, errors })
+            .then(() => {
+                res.render('register')
             })
             .catch(err => {
                 res.send(err)
@@ -80,9 +80,6 @@ class Controller{
             })
     }
 
-    static index(req,res){
-        res.render('home')
-    }
 }
 
 module.exports = Controller
