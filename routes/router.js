@@ -6,6 +6,8 @@ const doctor = require('./doctorRouter')
 
 router.get('/',Controller.login)
 
+router.post('/',Controller.verify)
+
 router.get('/register',Controller.register)
 
 router.post('/register',Controller.saveData)
