@@ -4,7 +4,8 @@ const bcryptjs = require('bcryptjs')
 class Controller{
 
     static login(req,res){
-        res.render('login')
+        const {error} = req.query
+        res.render('login',{ error })
     }
 
     static verify(req,res){
@@ -43,6 +44,10 @@ class Controller{
 
     static delete(req,res){
 
+    }
+
+    static index(req,res){
+        res.render('home')
     }
 }
 

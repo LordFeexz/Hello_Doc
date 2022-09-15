@@ -5,6 +5,11 @@
     <%- include('partials/navbar', {title: "Home",link1: '/',button1: "",link2:'',button2:""}); %>
 
     <h1 class="under">Login Form</h1>
+    <% if (error) { %>
+     <p style="color: red;">
+      <%= error %>
+     </p>
+    <% } %>
     <form>
         <div class="mb-2">
           <label for="exampleInputEmail1" class="form-label">userName</label>
