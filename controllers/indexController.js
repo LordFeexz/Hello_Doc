@@ -1,11 +1,11 @@
 class Controller{
 
     static login(req,res){
-        res.render('landingPage')
+        res.render('login')
     }
 
     static register(req,res){
-
+        res.render('register')
     }
 
     static medicineList(req,res){
@@ -13,7 +13,7 @@ class Controller{
     }
 
     static delete(req,res){
-        
+
     }
 }
 
