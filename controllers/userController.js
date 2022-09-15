@@ -1,7 +1,7 @@
 class Controller{
 
     static checkUp(req,res){
-
+        
     }
 
     static saveCheckUp(req,res){
