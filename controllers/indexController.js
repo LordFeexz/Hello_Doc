@@ -8,6 +8,10 @@ class Controller{
         res.render('register')
     }
 
+    static saveData(req,res){
+        
+    }
+
     static medicineList(req,res){
 
     }

@@ -8,6 +8,8 @@ router.get('/',Controller.login)
 
 router.get('/register',Controller.register)
 
+router.post('/register',Controller.saveData)
+
 router.get('/medicine',Controller.medicineList)
 
 router.get('/medicine/delete',Controller.delete) //nanti tombol delete nya cuma muncul kalo role nya doctor
