@@ -25,6 +25,7 @@
     "express-session": "^1.17.3",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
+    "receipt": "^1.4.0",
     "sequelize": "^6.21.6",
     "sequelize-cli": "^6.4.1"
   }
